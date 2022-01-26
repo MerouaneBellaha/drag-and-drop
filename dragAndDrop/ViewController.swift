@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 extension ViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
-        targetTouchedView(touch: touch, views: [myView, mySecondView])
+        targetTouchedView(touch: touch, views: view.subviews.reversed())
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
